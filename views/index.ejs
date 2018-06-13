@@ -1,1 +1,15 @@
-<h1>This is our Cloud App Home Page</h1>
+<div class="row">
+	<div class="col s12">
+		<h1>Cloud App Home Page</h1>
+	</div>
+	<div class="col s12">
+		<% arr.forEach(function(img, i) { %>
+			<% var imgUrl = cloudinary.url(img) %>
+			<div class="col s3">
+				<a href="<%= imgUrl %>">Image <%= i + 1 %>
+					<img src="<%= imgUrl %>" width=200> 
+				</a>
+			</div>
+		<% }); %>
+	</div>
+</div>
